@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <group>
+        <name>WB_ApplicationExecutiveGroup</name>
+        <securityMap>SECURITYMAP_PERSONAL</securityMap>
+        <uuid>_e-0000dca4-d1d4-8000-9277-010000010000_908</uuid>
+        <groupTypeUuid>_f-0000dc7c-dac5-8000-9277-010000010000_35</groupTypeUuid>
+        <description>Member of this group will have right to viewreports of Workflow Builder application. Additional they can view records, they are member of.</description>
+        <delegatedCreation>false</delegatedCreation>
+        <memberPolicy>MEMBERPOLICY_CLOSED</memberPolicy>
+        <viewingPolicy>VIEWINGPOLICY_HIGH</viewingPolicy>
+        <attributes/>
+    </group>
+    <members>
+        <users/>
+        <groups>
+            <groupUuid>_e-0000dc7c-dac5-8000-9277-010000010000_832</groupUuid>
+        </groups>
+    </members>
+    <admins>
+        <users/>
+        <groups>
+            <groupUuid>_e-0000dc7c-dac5-8000-9277-010000010000_832</groupUuid>
+        </groups>
+    </admins>
+    <ruleSet/>
+</groupHaul>

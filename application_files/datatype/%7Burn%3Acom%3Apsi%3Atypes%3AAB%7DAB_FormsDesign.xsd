@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:com:psi:types:AB"
+  xmlns:tns="urn:com:psi:types:AB" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="AB_FormsDesign">
+    <xsd:annotation>
+      <xsd:appinfo source="appian.jpa">
+		@Table(name="AB_FormsDesign")
+	  </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Id" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue @Column(name="Id", nullable=false, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AppId" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="App_Id", nullable=true, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="DefaultAssigneeGrp" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="Default_Assignee_Grp", nullable=true, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SequenceNumber" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="Sequence_Number", nullable=true, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MilestoneId" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="MilestoneId", nullable=true, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ApproveFormId" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="ApproveFormId", nullable=true, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RejectFormId" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="RejectFormId", nullable=true, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RejectActionMoveBack" nillable="true" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="RejectActionMoveBack", nullable=true, columnDefinition="boolean")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TaskMappingDone" nillable="true" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="TaskMappingDone", nullable=true, columnDefinition="boolean")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="LastModifiedBy" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="last_Modified_By", nullable=true, columnDefinition="varchar(255)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="LastModifiedDate" nillable="true" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="last_Modified_Date", nullable=true, columnDefinition="datetime")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="IsDeleted" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="Is_Deleted", nullable=true, columnDefinition="boolean")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

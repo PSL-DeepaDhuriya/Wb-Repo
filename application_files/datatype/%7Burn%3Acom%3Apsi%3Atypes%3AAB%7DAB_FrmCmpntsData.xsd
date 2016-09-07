@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:com:psi:types:AB"
+  xmlns:tns="urn:com:psi:types:AB" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="AB_FrmCmpntsData">
+    <xsd:annotation>
+      <xsd:appinfo source="appian.jpa">
+		@Table(name="AB_FrmCmpntsData")
+	  </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Id" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue @Column(name="Id", nullable=false, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FrmInstanceId" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="Frm_Instance_Id", nullable=true, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CmpntId" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="Cmpnt_Id", nullable=false, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="value" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="value", nullable=true, columnDefinition="varchar(3000)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

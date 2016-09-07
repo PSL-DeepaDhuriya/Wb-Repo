@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:com:psi:types:AB"
+  xmlns:tns="urn:com:psi:types:AB" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="%7Burn%3Acom%3Apsi%3Atypes%3AAB%7DAB_FormsDesign.xsd"/>
+  <xsd:include schemaLocation="%7Burn%3Acom%3Apsi%3Atypes%3AAB%7DAB_MilestoneDesign.xsd"/>
+  <xsd:complexType name="AB_AppAndFormsDesign">
+    <xsd:annotation>
+      <xsd:appinfo source="appian.jpa">
+		@Table(name="AB_AppDesign")
+	  </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Id" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue @Column(name="Id", nullable=false, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Name" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="NAME", nullable=true, columnDefinition="varchar(255)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Description" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="DESCRIPTION", nullable=true, columnDefinition="varchar(3000)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ViewerGroup" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="Viewer_Group", nullable=true, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CreaterUserId" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="Creater_UserId", nullable=true, columnDefinition="varchar(255)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="StartFormId" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="StartFormId", nullable=true, columnDefinition="integer")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CreationDate" nillable="true" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="Creation_Date", nullable=true, columnDefinition="datetime")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="Forms" type="tns:AB_FormsDesign">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@OneToMany(indexed=false) @JoinColumn(name="App_Id")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="Milestones" type="tns:AB_MilestoneDesign">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@OneToMany(indexed=false) @JoinColumn(name="App_Id")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
