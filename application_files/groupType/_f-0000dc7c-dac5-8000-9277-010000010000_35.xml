@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<groupTypeHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <groupType>
-        <name>WB_WorkflowBuilder</name>
-        <uuid>_f-0000dc7c-dac5-8000-9277-010000010000_35</uuid>
-        <description>This group type is created for 'Workflow Builder' application.</description>
-        <attributes/>
-    </groupType>
-</groupTypeHaul>

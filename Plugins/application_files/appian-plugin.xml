@@ -1,0 +1,17 @@
+<appian-plugin name="CDT Manipulation" key="com.appiancorp.cdtmanipulation">
+
+  <plugin-info>
+    <description>CDT Manipulation</description>
+    <vendor name="Appian Corporation" url="http://www.appian.com" />
+    <version>1.1.0</version>
+    <application-version min="6.1.0" />
+  </plugin-info>
+
+  <function-category key="appianCdtManipulationCategory" name="Appian CDT Manipulation"/>
+  <function key="joinCdts" class="com.appiancorp.cdtmanipulation.JoinCdts"/>
+
+  <function key="expandCdt" class="com.appiancorp.cdtmanipulation.ExpandCdt"/>
+
+  <function key="updateCdt" class="com.appiancorp.cdtmanipulation.UpdateCdt"/>
+
+</appian-plugin>
